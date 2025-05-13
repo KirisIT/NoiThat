@@ -1,0 +1,173 @@
+.products-section {
+  padding: 64px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  padding: 8px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 30px;
+  color: #666;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background-color: #212121;
+  color: #fff;
+}
+
+.filter-btn:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+.products-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Nút điều hướng chồng lên ảnh */
+.products-container button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.products-container button:first-child {
+  left: 10px;
+}
+
+.products-container button:last-child {
+  right: 10px;
+}
+
+/* Tailwind classes (fallback nếu không có Tailwind) */
+.w-10 {
+  width: 2.5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #f3f4f6;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  justify-items: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 40px;
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .products-container button:first-child {
+    left: 20px;
+  }
+
+  .products-container button:last-child {
+    right: 20px;
+  }
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.view-all a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.view-all a:after {
+  content: '→';
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.view-all a:hover:after {
+  transform: translateX(4px);
+}

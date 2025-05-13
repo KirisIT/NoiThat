@@ -1,0 +1,348 @@
+.hero-section {
+    position: relative;
+    padding: 0;
+    background-color: #191919;
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('../../assets/images/bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    z-index: 1;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 10;
+    position: relative;
+    padding-top: 150px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+  }
+  
+  .search-container {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 15px 25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .search-button {
+    background: #e58411;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-icon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+  }
+  
+  .main-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+  
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .color-selector-container {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .color-selector {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+  }
+  
+  .color-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .color-btn.orange {
+    background-color: #e58411;
+  }
+  
+  .color-btn.cyan {
+    background-color: #3aa1b9;
+  }
+  
+  .color-btn.gray {
+    background-color: #4f4f4f;
+  }
+  
+  .check-icon {
+    width: 16px;
+    height: 16px;
+    color: white;
+  }
+  
+  .focus-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .focus-inner {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .focus-btn.left-bottom {
+    bottom: 50px;
+    left: 150px;
+  }
+  
+  .focus-btn.right-top {
+    top: 60px;
+    right: 250px;
+  }
+  
+  .focus-btn.right-center {
+    top: 230px;
+    right: 120px;
+  }
+  
+  .focus-btn.right-bottom {
+    bottom: 80px;
+    right: 180px;
+  }
+  
+  .product-hotspot {
+    position: absolute;
+    z-index: 5;
+  }
+  
+  .hotspot-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .hotspot-btn .pulse {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: pulse 2s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+  }
+  
+  .hotspot-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+  }
+  
+  .hotspot-btn:hover .hotspot-dot {
+    opacity: 0;
+  }
+  
+  .hotspot-btn .plus-h,
+  .hotspot-btn .plus-v {
+    content: '';
+    position: absolute;
+    background-color: #e58411;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .hotspot-btn .plus-h {
+    width: 16px;
+    height: 2px;
+  }
+  
+  .hotspot-btn .plus-v {
+    width: 2px;
+    height: 16px;
+  }
+  
+  .hotspot-btn:hover .plus-h,
+  .hotspot-btn:hover .plus-v {
+    opacity: 1;
+  }
+  
+  .hotspot-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .product-hotspot.flower-pot {
+    bottom: 130px;
+    left: 125px;
+  }
+  
+  .product-hotspot.plant-right {
+    top: 80px;
+    right: 120px;
+  }
+  
+  .product-hotspot.decoration {
+    top: 235px;
+    right: 110px;
+  }
+  
+  .product-hotspot.coffee-table {
+    bottom: 105px;
+    right: 290px;
+  }
+  
+  .product-hotspot.side-ottoman {
+    bottom: 85px;
+    right: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .main-image {
+      height: 350px;
+    }
+  
+    .hotspot-btn {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .hotspot-dot {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .color-hotspot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+  }
